@@ -39,7 +39,9 @@ props:['images'],
 <style lang="scss" scoped>
 
     @import '../scss/_style.scss';
-
+    section{
+        overflow: hidden;
+    }
     .carousel{
         height: 400px;
         background-color: $head-bg;   
@@ -70,7 +72,6 @@ props:['images'],
         .button{
            position: absolute;
            background-color: white;
-           padding: 10px 10px 20px 10px;
            padding: 10px 10px 20px 10px;
            color: $button-text;
            border-radius: 50%;

@@ -3,6 +3,7 @@
    <Header/>
    <main>
      <Slider :images="tasteSliderImg" />
+     <ImgSection/>
    </main>
   </div>
 </template>
@@ -11,11 +12,13 @@
 
 import Header from '@/components/Header.vue';
 import Slider from '@/components/Slider.vue';
+import ImgSection from '@/components/ImgSection.vue';
 export default {
   name: 'App',
   components: {
     Header,
-    Slider
+    Slider,
+    ImgSection
   },
   data(){
     return{
@@ -35,7 +38,7 @@ export default {
           bgUrl:require('@/img/h3-rev-img-5.png'),
           id:2
         },
-      ]
+      ],
     }
   }
 }
