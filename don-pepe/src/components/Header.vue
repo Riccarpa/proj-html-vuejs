@@ -77,6 +77,7 @@ data(){
     color: white;
     .container{
         height: 100px;
+       
         .row{
             height: 100%;
             justify-content: center;
@@ -92,6 +93,7 @@ data(){
                 }
                 img{
                     height: 80%;
+                    margin: 0 2rem;
                 }
                 ul.main-nav{
                     
@@ -115,8 +117,8 @@ data(){
                 }
                 ul.side-nav{
 
-                     li{
-                         margin: 20px;
+                     li{ 
+                         margin: 1rem;
                         padding: 20px;
                         cursor: pointer;
                         &:hover{
@@ -132,8 +134,9 @@ data(){
                         &:last-child::before{
                         content:"\26B2";
                         position: absolute;
-                        left: 0;
-                        top: 20px;
+                        font-size: 30px;
+                        left: -5px;
+                        top: 8px;
                         }
                        
                     }
