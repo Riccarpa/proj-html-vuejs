@@ -3,22 +3,10 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="h-100 position-relative">
             <div class="carousel-inner h-100">
-                <div class="carousel-item active">
+                <div v-for="img in images" :key="img.id"  class="carousel-item " :class="img.id==0 ? 'active' : ''">
                     <div class="img-center position-relative">
-                        <img class="bg" src="../img/h3-rev-img-5.png" alt="">
-                        <img src="../img/h3-rev-img-2.png" class="d-block " alt="...">
-                    </div>
-                </div>
-                <div class="carousel-item"> 
-                    <div class="img-center position-relative">
-                    <img class="bg" src="../img/h3-rev-img-5.png" alt="">
-                    <img src="../img/h3-rev-img-2.png" class="d-block " alt="...">
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="img-center position-relative">
-                        <img class="bg" src="../img/h3-rev-img-5.png" alt="">
-                        <img src="../img/h3-rev-img-2.png" class="d-block " alt="...">
+                        <img class="bg" :src="img.bgUrl" alt="">
+                        <img :src="img.url" class="d-block " alt="...">
                     </div>
                 </div>
             </div>
@@ -33,14 +21,18 @@
         </div>
        
      </div> 
+     
   </section>
 </template>
 
 <script>
 
 export default {
-name:'Slider'
+name:'Slider',
+props:['images'],
+
 }
+
 
 </script>
 

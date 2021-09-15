@@ -2,7 +2,7 @@
   <div id="app">
    <Header/>
    <main>
-     <Slider/>
+     <Slider :images="tasteSliderImg" />
    </main>
   </div>
 </template>
@@ -16,6 +16,27 @@ export default {
   components: {
     Header,
     Slider
+  },
+  data(){
+    return{
+      tasteSliderImg:[
+        {
+          url:require('@/img/h3-rev-img-2.png'),
+          bgUrl:require('@/img/h3-rev-img-1.png'),
+          id:0
+        },
+        {
+          url:require('@/img/h3-rev-img-4.png'),
+          bgUrl:require('@/img/h3-rev-img-3.png'),
+          id:1
+        },
+        {
+          url:require('@/img/h3-rev-img-6.png'),
+          bgUrl:require('@/img/h3-rev-img-5.png'),
+          id:2
+        },
+      ]
+    }
   }
 }
 </script>
