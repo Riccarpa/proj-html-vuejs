@@ -10,26 +10,15 @@
         <div class="carousel-inner h-100">
           <!-- slider 1 images -->
           <div
-            v-for="img in images"
-            :key="img.id"
-            class="carousel-item "
-            :class="img.id == 0 ? 'active' : ''"
-          >
-            <div class="img-center position-relative">
-              <img class="bg" :src="img.bgUrl" alt="" />
-              <img :src="img.url" class="d-block " alt="..." />
-            </div>
-          </div>
-          <!-- slider 2  citazioni -->
-          <div
-            v-for="item in citazioni"
+            v-for="item in datascollect"
             :key="item.id"
             class="carousel-item "
             :class="item.id == 0 ? 'active' : ''"
           >
             <div class="img-center position-relative">
               <img class="bg" :src="item.bgUrl" alt="" />
-              <div class="cit">
+              <img v-if="item.url" :src="item.url" class="d-block " alt="..." />
+              <div v-if="item.text" class="cit">
                 <i
                   class="fas fa-quote-right d-block mb-4 fa-2x text-danger"
                 ></i>
@@ -74,6 +63,18 @@
 export default {
   name: "Slider",
   props: ["images", "citazioni"],
+  computed: {
+    datascollect() {
+      let datas = [];
+      if (this.images) {
+        datas = [...this.images];
+      }
+      if (this.citazioni) {
+        datas = [...this.citazioni];
+      }
+      return datas;
+    },
+  },
 };
 </script>
 

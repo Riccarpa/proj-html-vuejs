@@ -46,6 +46,18 @@ export default {
           bgUrl: require("@/img/h3-testimonials-bckgrnd.jpg"),
           id: 0,
         },
+        {
+          text:
+            "forget the trendy pizza shops, this hidden spot makes the best new york-style pizza slice in naples",
+          bgUrl: require("@/img/h3-testimonials-bckgrnd.jpg"),
+          id: 1,
+        },
+        {
+          text:
+            "forget the trendy pizza shops, this hidden spot makes the best new york-style pizza slice in naples",
+          bgUrl: require("@/img/h3-testimonials-bckgrnd.jpg"),
+          id: 2,
+        },
       ],
     };
   },
