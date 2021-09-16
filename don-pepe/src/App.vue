@@ -5,6 +5,7 @@
       <Slider :images="tasteSliderImg" />
       <ImgSection />
       <Slider :citazioni="testimonialSlider" />
+      <HalfDividedSection :combos="pizzaSpecials" />
     </main>
   </div>
 </template>
@@ -13,12 +14,15 @@
 import Header from "@/components/Header.vue";
 import Slider from "@/components/Slider.vue";
 import ImgSection from "@/components/ImgSection.vue";
+import HalfDividedSection from "@/components/HalfDividedSection.vue";
+
 export default {
   name: "App",
   components: {
     Header,
     Slider,
     ImgSection,
+    HalfDividedSection,
   },
   data() {
     return {
@@ -56,6 +60,29 @@ export default {
           text:
             "forget the trendy pizza shops, this hidden spot makes the best new york-style pizza slice in naples",
           bgUrl: require("@/img/h3-testimonials-bckgrnd.jpg"),
+          id: 2,
+        },
+      ],
+      pizzaSpecials: [
+        {
+          size: "combo piccolo",
+          text:
+            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dui",
+          price: "$10",
+          id: 0,
+        },
+        {
+          size: "combo medio",
+          text:
+            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dui",
+          price: "$20",
+          id: 1,
+        },
+        {
+          size: "combo grande",
+          text:
+            "lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dui",
+          price: "$30",
           id: 2,
         },
       ],

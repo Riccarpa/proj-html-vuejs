@@ -26,7 +26,14 @@
                 <span class="text-danger d-block m-2"
                   >WASHINGTON POST 2018
                 </span>
-                <i class="fas fa-ellipsis-h fa-2x text-danger"></i>
+                <div>
+                  <i
+                    v-for="(item, index) in datascollect"
+                    :key="item.id"
+                    class="fas fa-circle m-1"
+                    :class="index === 0 ? 'text-danger' : ''"
+                  ></i>
+                </div>
               </div>
             </div>
           </div>
@@ -72,6 +79,7 @@ export default {
       if (this.citazioni) {
         datas = [...this.citazioni];
       }
+
       return datas;
     },
   },
