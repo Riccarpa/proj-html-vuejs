@@ -1,71 +1,84 @@
 <template>
   <section>
-      <div class="row">
-          <div v-for="image in images" :key="image.id" class="img-element col-3 g-2 position-relative">
-              <img class="img img-fluid " :src="image.url" alt="">
-              <div class="hover-element h-100 w-100 "><i class="fas fa-glasses fa-2x"></i></div>
+    <div class="row">
+      <div
+        v-for="item in dataCollect"
+        :key="item.id"
+        class="img-element col-3  position-relative"
+        :class="images1 ? 'g-2' : 'g-0 mt-2'"
+      >
+        <img class="img img-fluid " :src="item.url" alt="" />
+        <div class="hover-element h-100 w-100 ">
+          <i v-if="images1" class="fas fa-glasses fa-2x"></i>
+          <div class="people-hover" v-else>
+            <div class="text-center text-light">
+              <h3 class="text-uppercase">{{ item.name }}</h3>
+              <p class="text-capitalize">{{ item.role }}</p>
+              <i class="fab fa-instagram"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-facebook"></i>
+            </div>
           </div>
-       </div>
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <script>
 export default {
-name:'ImgSection',
-data(){
-    return{
-        images:[
-            {
-                url:require('@/img/h3-img-1.jpg'),
-                id:0
-            },
-             {
-                url:require('@/img/h3-img-2.jpg'),
-                id:1
-            },
-             {
-                url:require('@/img/h3-img-3.jpg'),
-                id:2
-            },
-             {
-                url:require('@/img/h3-img-4.jpg'),
-                id:3
-            },
-        ]
-    }
-}
-}
+  name: "ImgSection",
+  props: ["images1", "images2"],
+  computed: {
+    dataCollect() {
+      let datas = [];
+      if (this.images1) {
+        datas = [...this.images1];
+      }
+      if (this.images2) {
+        datas = [...this.images2];
+      }
+
+      return datas;
+    },
+  },
+};
 </script>
 
 <style lang="scss" scoped>
+@import "../scss/_style.scss";
 
-@import '../scss/_style.scss';
-
-
-section{
-    overflow: hidden;
+section {
+  overflow: hidden;
 }
-.hover-element{
-    background-image: url('../img/pattern.png');
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    display: none;
-    i{
-        background-color:$button-text;
-        padding: 10px;
-        border-radius: 50%;
-    }
+.hover-element {
+  background-image: url("../img/pattern.png");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  i {
+    background-color: $button-text;
+    padding: 10px;
+    border-radius: 50%;
+  }
 }
 .img-element:hover .img {
-    display: none;
+  display: none;
 }
-.img-element:hover .hover-element{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.img-element:hover .hover-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-
+.people-hover {
+  width: 90%;
+  height: 90%;
+  background-color: $button-text;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 </style>

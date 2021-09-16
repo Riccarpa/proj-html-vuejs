@@ -3,10 +3,11 @@
     <Header />
     <main>
       <Slider :images="tasteSliderImg" />
-      <ImgSection />
+      <ImgSection :images1="imgSection1" />
       <Slider :citazioni="testimonialSlider" />
       <HalfDividedSection :combos="pizzaSpecials" />
       <YourOwnPizza />
+      <ImgSection :images2="imgSection2" />
     </main>
   </div>
 </template>
@@ -66,6 +67,24 @@ export default {
           id: 2,
         },
       ],
+      imgSection1: [
+        {
+          url: require("@/img/h3-img-1.jpg"),
+          id: 0,
+        },
+        {
+          url: require("@/img/h3-img-2.jpg"),
+          id: 1,
+        },
+        {
+          url: require("@/img/h3-img-3.jpg"),
+          id: 2,
+        },
+        {
+          url: require("@/img/h3-img-4.jpg"),
+          id: 3,
+        },
+      ],
       pizzaSpecials: [
         {
           size: "combo piccolo",
@@ -87,6 +106,32 @@ export default {
             "lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent dui",
           price: "$30",
           id: 2,
+        },
+      ],
+      imgSection2: [
+        {
+          url: require("@/img/h1-team-1a-700x700.jpg"),
+          name: "Marco Rossi",
+          role: "Cameriere",
+          id: 0,
+        },
+        {
+          url: require("@/img/h1-team-2a.jpg"),
+          name: "Lucia Rossi",
+          role: "Pizzaiola",
+          id: 1,
+        },
+        {
+          url: require("@/img/h1-team-3a.jpg"),
+          name: "paola Rossi",
+          role: "Lavapiatti",
+          id: 2,
+        },
+        {
+          url: require("@/img/h1-team-4a.jpg"),
+          name: "Giacomo Rossi",
+          role: "Direttore di sala",
+          id: 3,
         },
       ],
     };

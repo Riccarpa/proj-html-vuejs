@@ -3,19 +3,19 @@
     <div class="position-relative">
       <h1>go ahead and build your own pizza we won't judge</h1>
       <div class="row top">
-        <div class="col-1">></div>
-        <div class="col-10">></div>
-        <div class="col-1">></div>
+        <div class="col-1"></div>
+        <div class="col-10"></div>
+        <div class="col-1"></div>
       </div>
       <div class="row mid">
-        <div class="col-1">></div>
-        <div class="col-10">></div>
-        <div class="col-1">></div>
+        <div class="col-1"></div>
+        <div class="col-10"></div>
+        <div class="col-1"></div>
       </div>
       <div class="row bott">
-        <div class="col-1">></div>
-        <div class="col-10">></div>
-        <div class="col-1">></div>
+        <div class="col-1"></div>
+        <div class="col-10"></div>
+        <div class="col-1"></div>
       </div>
     </div>
   </section>
