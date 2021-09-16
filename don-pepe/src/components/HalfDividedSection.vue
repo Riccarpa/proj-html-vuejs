@@ -1,17 +1,21 @@
 <template>
   <section>
     <div class="row h-100">
+      <!-- left side -->
       <div class="col-6 left h-100">
         <img class="h-100 w-100" src="@/img/h1-img-4.jpg" alt="" />
       </div>
+      <!-- right side -->
       <div
         class="col-6 right d-flex flex-column align-items-center justify-content-center  "
       >
         <div class="title m-2">
+          <!-- title -->
           <h2>SPECIALS*</h2>
           <p>{{ combos[0].text }}</p>
         </div>
         <ul>
+          <!-- ul -->
           <li v-for="item in combos" :key="item.id">
             <div class="d-flex justify-content-center ">
               <span class="price">{{ item.price }}</span>

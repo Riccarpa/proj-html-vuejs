@@ -6,6 +6,7 @@
       <ImgSection />
       <Slider :citazioni="testimonialSlider" />
       <HalfDividedSection :combos="pizzaSpecials" />
+      <YourOwnPizza />
     </main>
   </div>
 </template>
@@ -15,6 +16,7 @@ import Header from "@/components/Header.vue";
 import Slider from "@/components/Slider.vue";
 import ImgSection from "@/components/ImgSection.vue";
 import HalfDividedSection from "@/components/HalfDividedSection.vue";
+import YourOwnPizza from "@/components/YourOwnPizza.vue";
 
 export default {
   name: "App",
@@ -23,6 +25,7 @@ export default {
     Slider,
     ImgSection,
     HalfDividedSection,
+    YourOwnPizza,
   },
   data() {
     return {
