@@ -82,14 +82,13 @@ export default {
 @import "../scss/_style.scss";
 
 section {
-  height: 600px;
   margin: 0.5rem 0 0.5rem 0;
 
   .menu-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 2.5rem;
+    margin: 4rem;
     margin-bottom: 0;
     span {
       color: $button-text;

@@ -10,6 +10,7 @@
       <ImgSection :images2="imgSection2" />
       <Sponsor />
       <Menu />
+      <HalfDividedSection :events="events" />
     </main>
   </div>
 </template>
@@ -138,6 +139,29 @@ export default {
           name: "Giacomo Rossi",
           role: "Direttore di sala",
           id: 3,
+        },
+      ],
+      events: [
+        {
+          event: "traditional neapolitan pies in kioto pizza mercato",
+          place: "204E. Pizzetta Tommaso",
+          date: "02",
+          month: "NOV",
+          id: 0,
+        },
+        {
+          event: "terrazza patio dining space opening this weekend",
+          place: "204E. Pizzetta Tommaso",
+          date: "03",
+          month: "NOV",
+          id: 1,
+        },
+        {
+          event: "sienna private dining room with stephane brunn",
+          place: "204E. Pizzetta Tommaso",
+          date: "05",
+          month: "NOV",
+          id: 2,
         },
       ],
     };

@@ -2,21 +2,54 @@
   <section>
     <div class="row h-100">
       <!-- left side -->
-      <div class="col-6 left h-100">
-        <img class="h-100 w-100" src="@/img/h1-img-4.jpg" alt="" />
+      <div
+        class="col-6 left h-100"
+        :class="
+          events ? ' d-flex flex-column  justify-content-center bg-dark' : ''
+        "
+      >
+        <!-- image -->
+        <img
+          v-if="combos"
+          class="h-100 w-100"
+          src="@/img/h1-img-4.jpg"
+          alt=""
+        />
+        <!-- title -->
+        <div v-if="events" class="title m-4 text-white ">
+          <span class="text-uppercase text-danger fw-bold "
+            >Made with love</span
+          >
+          <h2 class="text-uppercase">delish pizza deals</h2>
+        </div>
+        <!-- ul -->
+        <ul v-if="events" class="text-white m-4">
+          <li v-for="item in datascollect" :key="item.id">
+            <div class="d-flex justify-content-center ">
+              <span class="price"
+                >{{ item.date
+                }}<span class="d-block text-white">{{ item.month }}</span></span
+              >
+              <div>
+                <span class="type">{{ item.event }}</span>
+                <p class="text-danger">{{ item.place }}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
       <!-- right side -->
       <div
         class="col-6 right d-flex flex-column align-items-center justify-content-center  "
       >
-        <div class="title m-2">
+        <div v-if="combos" class="title m-2">
           <!-- title -->
           <h2>SPECIALS*</h2>
           <p>{{ combos[0].text }}</p>
         </div>
-        <ul>
-          <!-- ul -->
-          <li v-for="item in combos" :key="item.id">
+        <!-- ul -->
+        <ul v-if="combos">
+          <li v-for="item in datascollect" :key="item.id">
             <div class="d-flex justify-content-center ">
               <span class="price">{{ item.price }}</span>
               <div>
@@ -26,6 +59,7 @@
             </div>
           </li>
         </ul>
+        <img v-else class="h-100 w-100" src="@/img/h3-img-5a.jpg" alt="" />
       </div>
     </div>
   </section>
@@ -34,7 +68,20 @@
 <script>
 export default {
   name: "HalfDividedSection",
-  props: ["combos"],
+  props: ["combos", "events"],
+  computed: {
+    datascollect() {
+      let datas = [];
+      if (this.combos) {
+        datas = [...this.combos];
+      }
+      if (this.events) {
+        datas = [...this.events];
+      }
+
+      return datas;
+    },
+  },
 };
 </script>
 
@@ -44,7 +91,7 @@ export default {
 section {
   height: 500px;
   margin: 0.5rem 0 0.5rem 0;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 p {
   width: 80%;

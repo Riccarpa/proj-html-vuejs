@@ -40,6 +40,7 @@ export default {
 
 <style lang="scss" scoped>
 section {
+  overflow-x: hidden;
   height: 200px;
   background-color: #ebebde;
   margin: 0.5rem 0 0.5rem 0;
