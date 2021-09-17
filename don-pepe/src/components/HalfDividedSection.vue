@@ -3,9 +3,11 @@
     <div class="row h-100">
       <!-- left side -->
       <div
-        class="col-6 left h-100"
+        class="col-6 left "
         :class="
-          events ? ' d-flex flex-column  justify-content-center bg-dark' : ''
+          events
+            ? 'left-ul d-flex flex-column justify-content-center bg-dark '
+            : ''
         "
       >
         <!-- image -->
@@ -16,7 +18,7 @@
           alt=""
         />
         <!-- title -->
-        <div v-if="events" class="title m-4 text-white ">
+        <div v-if="events" class="title  text-white ">
           <span class="text-uppercase text-danger fw-bold "
             >Made with love</span
           >
@@ -26,13 +28,14 @@
         <ul v-if="events" class="text-white m-4">
           <li v-for="item in datascollect" :key="item.id">
             <div class="d-flex justify-content-center ">
-              <span class="price"
-                >{{ item.date
-                }}<span class="d-block text-white">{{ item.month }}</span></span
-              >
+              <div class="price text-center">
+                <span> {{ item.date }} </span>
+                <span class="d-block text-white">{{ item.month }}</span>
+              </div>
               <div>
                 <span class="type">{{ item.event }}</span>
                 <p class="text-danger">{{ item.place }}</p>
+                <hr class="text-danger" />
               </div>
             </div>
           </li>
@@ -40,7 +43,7 @@
       </div>
       <!-- right side -->
       <div
-        class="col-6 right d-flex flex-column align-items-center justify-content-center  "
+        class="col-6 right d-flex flex-column align-items-center justify-content-center h-100 "
       >
         <div v-if="combos" class="title m-2">
           <!-- title -->
@@ -104,5 +107,9 @@ p {
   color: $button-text;
   margin: 0 1rem 0 2.5rem;
   font-weight: bold;
+}
+.left-ul {
+  padding: 3rem;
+  height: 90%;
 }
 </style>
