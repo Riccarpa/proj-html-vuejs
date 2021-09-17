@@ -11,7 +11,9 @@
       <Sponsor />
       <Menu />
       <HalfDividedSection :events="events" />
+      <TableBook />
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -23,6 +25,8 @@ import HalfDividedSection from "@/components/HalfDividedSection.vue";
 import YourOwnPizza from "@/components/YourOwnPizza.vue";
 import Sponsor from "@/components/Sponsor.vue";
 import Menu from "@/components/Menu.vue";
+import TableBook from "@/components/TableBook.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   name: "App",
@@ -34,6 +38,8 @@ export default {
     YourOwnPizza,
     Sponsor,
     Menu,
+    TableBook,
+    Footer,
   },
   data() {
     return {

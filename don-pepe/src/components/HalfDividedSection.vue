@@ -62,6 +62,7 @@
             </div>
           </li>
         </ul>
+        <!-- image -->
         <img v-else class="h-100 w-100" src="@/img/h3-img-5a.jpg" alt="" />
       </div>
     </div>
