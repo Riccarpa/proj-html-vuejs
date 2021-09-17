@@ -9,6 +9,7 @@
       <YourOwnPizza />
       <ImgSection :images2="imgSection2" />
       <Sponsor />
+      <Menu />
     </main>
   </div>
 </template>
@@ -20,6 +21,7 @@ import ImgSection from "@/components/ImgSection.vue";
 import HalfDividedSection from "@/components/HalfDividedSection.vue";
 import YourOwnPizza from "@/components/YourOwnPizza.vue";
 import Sponsor from "@/components/Sponsor.vue";
+import Menu from "@/components/Menu.vue";
 
 export default {
   name: "App",
@@ -30,6 +32,7 @@ export default {
     HalfDividedSection,
     YourOwnPizza,
     Sponsor,
+    Menu,
   },
   data() {
     return {
